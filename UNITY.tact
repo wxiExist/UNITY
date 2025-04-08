@@ -4,7 +4,7 @@ import { JettonMinter } from "@stdlib/jetton/JettonMinter"
 import { Builder } from "@stdlib/Builder"
 import { Dictionary } from "@stdlib/Dictionary"
 
-contract LUSC {
+contract UNITY {
     owner: Address
     treasury: Dictionary<Address, Coins>
     totalSupply: Int
@@ -59,7 +59,6 @@ contract LUSC {
 
     receive("vote", action: Slice) {
         require(ctx.sender == self.owner)
-        // to be extended for DAO vote logic
     }
 
     get fun getBalance(addr: Address): Int {
